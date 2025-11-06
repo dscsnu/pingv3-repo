@@ -9,14 +9,12 @@ class Bot(Strategy):
 
     def begin(self) -> Move:
         # Make your initial move here
-        return Move.COOPERATE  # Example: always starts with COOPERATE (modify it to implement your strategy)
-
+        return Move.DEFECT  
     def turn(self, history: History) -> Move:
         # Make your move based on the history
         return (
-            Move.DEFECT
-        )  # Example: always plays DEFECT (modify it to implement your strategy)
-
+            Move.COOPERATE
+        )  
 
 tester = StrategyTester(Bot)
 tester.run()
